@@ -16,5 +16,6 @@
     <Compile Include="Program.fs" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <ProjectReference Include="..\BigramParser\BigramParser.csproj" />
+    <None Include="Properties\launchSettings.json" />
   </ItemGroup>
 </Project>

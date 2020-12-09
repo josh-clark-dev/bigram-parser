@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BigramParsingProgram": {
+      "commandName": "Project",
+      "commandLineArgs": "-s \"Santa is coming to town today and Santa is going to bring presents!\""
+    }
+  }
+}
