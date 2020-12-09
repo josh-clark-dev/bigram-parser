@@ -5,7 +5,9 @@ namespace BigramParser
 {
     public class Histogram
     {
-        private readonly Parser parser;
+        readonly Parser parser;
+
+        readonly Dictionary<string, int> _Bigrams = new Dictionary<string, int>();
 
         public Histogram(Parser parser)
         {
@@ -13,9 +15,9 @@ namespace BigramParser
         }
 
         /// <summary>
-        /// Get bigram histogram
+        /// Get a histogram of bigrams contained within the text
         /// </summary>
-        /// <returns>A collection of Bigrams</returns>
+        /// <returns>A readonly collection of bigrams</returns>
         public IReadOnlyCollection<IBigram> GetHistogram(string text)
         {
             var words = parser.ParseText(text);
@@ -25,31 +27,48 @@ namespace BigramParser
             return histogram;
         }
 
-        public IReadOnlyCollection<IBigram> FindBigrams(IReadOnlyCollection<string> wordList)
+        private IReadOnlyCollection<IBigram> FindBigrams(IReadOnlyCollection<string> wordList)
         {
-            var bigrams = new Dictionary<string, int>();
+            GenerateBigrams(wordList.ToArray());
 
-            var words = wordList.ToArray();
+            return _Bigrams
+                 .Select(x => new Bigram(x.Key, x.Value))
+                 .ToArray();
+        }
 
+        private void GenerateBigrams(string[] words)
+        {
             for (var i = 0; i < words.Length; i++)
             {
                 if (words.Length == i + 1) break;
 
-                var bigram = $"{words[i].ToLower()} {words[i + 1].ToLower()}";
+                if (IsContraction(words[i]))
+                {
+                    AddOrUpdateBigrams(words[i]);
+                }
 
-                if (bigrams.ContainsKey(bigram))
-                {
-                    bigrams[bigram] += 1;
-                }
-                else
-                {
-                    bigrams.Add(bigram, 1);
-                }
+                var bigram = $"{words[i]} {words[i + 1]}";
+
+                AddOrUpdateBigrams(bigram);
+            }
+        }
+
+        private bool IsContraction(string word)
+        {
+            return word.Contains("'");
+        }
+
+        private void AddOrUpdateBigrams(string bigram)
+        {
+            var key = bigram.ToLower();
+
+            if (!_Bigrams.ContainsKey(key))
+            {
+                _Bigrams.Add(key, 1);
+                return;
             }
 
-            return bigrams
-                 .Select(x => new Bigram(x.Key, x.Value))
-                 .ToArray();
+            _Bigrams[key] += 1;
         }
     }
 }
