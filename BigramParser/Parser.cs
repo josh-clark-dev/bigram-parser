@@ -11,7 +11,7 @@ namespace BigramParser
         /// This method will parse the input text, remove any special characters, and return a list of words.
         /// </summary>
         /// <param name="inputText">The input text from either a string or a file</param>
-        /// <returns>A read only collection of words</returns>
+        /// <returns>A readonly collection of words</returns>
         public IReadOnlyCollection<string> ParseText(string inputText)
         {
             if (inputText == null) return Array.Empty<string>();
