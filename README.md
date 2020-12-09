@@ -27,10 +27,10 @@ This program is configured to run on Windows but can be configured to run on any
 To run this program on Windows, perform the following steps:
 
 1. Create a local copy of the repository.
-2. Open the solution in Visual Studios
+2. Open the solution in Visual Studios.
 3. Right click the BigramParsingProgram project, select 'Publish', and then select 'Publish to Folder'.
 4. Copy the published folder to a location of your choice.
-5. To execute the program run one of the following commands:
+5. To execute the program from the command prompt run one of the following commands:
    BigramParsingProgram.exe -s <STRING> or -f <FILE_NAME>
 
    Example Commands:
