@@ -22,7 +22,9 @@ namespace BigramParserUnitTests
 
         [Theory]
         [InlineData("Quick!", "Quick")]
+        [InlineData("The    Quick", "The Quick")]
         [InlineData("The: Quick; Brown.", "The Quick Brown")]
+        [InlineData("!@#$%^&*()_+The: Quick;<>?/| Brown.", "The Quick Brown")]
         [InlineData("I'm a test", "I'm a test")]
         public void ParseText_SpecialCharacterRemoval_WordList(string text, string expectedValues)
         {
