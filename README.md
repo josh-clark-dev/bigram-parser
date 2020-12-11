@@ -5,7 +5,8 @@ A bigram parsing and histogram solution
 ## Table of Contents
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [Setup](#setup)
+* [Website](#website)
+* [Console app setup](#console-app-setup)
 
 ## General info
 This project contains a program used to parse input text, either a string or file, and output the bigrams contained within the text.
@@ -20,8 +21,13 @@ The program is designed to only support sentences written in English.  Other lan
 - .NET Standard 2.1
 - C# 8.0
 - F# 5.0
+- React
+- SpaServices
 
-## Setup
+## Website
+This project contains a web application written in React. It can be accessed at http://findbigrams.com.
+
+## Console App Setup
 ```
 This program is configured to run on Windows but can be configured to run on any operating system.
 To run this program on Windows, perform the following steps:

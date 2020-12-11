@@ -1,0 +1,10 @@
+html, body {
+    height: 100%;
+}
+body {
+    font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+.layout {
+    height: 100%;
+}

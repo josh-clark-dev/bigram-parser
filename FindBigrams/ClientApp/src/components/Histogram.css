@@ -1,0 +1,25 @@
+﻿.histogram {
+    text-align: center;
+    border-left: 1px solid #a9a9a9;
+}
+
+.label {
+    font-weight: 700;
+    font-size: 5rem;
+    letter-spacing: .25rem;
+}
+
+.bigram-list {
+    padding: 1.00rem;
+}
+
+.bigram {
+    padding: 0.15rem 1.25rem;
+    border: none;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+    .bigram:before {
+        content: "• "
+    }
