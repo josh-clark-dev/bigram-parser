@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Related Files", "Related Fi
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindBigrams", "FindBigrams\FindBigrams.csproj", "{44145E5C-1DE8-4DA1-931E-CBC7C5901243}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{5ED69C11-54E3-4C4E-9605-4C5A3679E1F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ED69C11-54E3-4C4E-9605-4C5A3679E1F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ED69C11-54E3-4C4E-9605-4C5A3679E1F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44145E5C-1DE8-4DA1-931E-CBC7C5901243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44145E5C-1DE8-4DA1-931E-CBC7C5901243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44145E5C-1DE8-4DA1-931E-CBC7C5901243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44145E5C-1DE8-4DA1-931E-CBC7C5901243}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +51,6 @@ Global
 		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
 		$0.VersionControlPolicy = $2
 		description = This program is used to parse text and return a histogram of the bigrams.
-		version = 1.0
+		version = 2.0
 	EndGlobalSection
 EndGlobal

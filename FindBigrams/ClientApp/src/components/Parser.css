@@ -1,0 +1,41 @@
+﻿.parser {
+    text-align: center;
+    border-right: 1px solid #a9a9a9;
+}
+
+.label {
+    font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing: .25rem;
+    white-space: nowrap;
+}
+
+.textarea {
+    height: 15rem;
+    min-width: 300px;
+    width: 70%;
+}
+
+.find-bigrams {
+    margin-right: 10px;
+}
+
+.button-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content:center;
+}
+
+.button {
+    background-color: #EFEFF7;
+    color: #3A82F7;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    white-space: nowrap;
+}
+
+.button:hover {
+    color: #295CAD;
+}
